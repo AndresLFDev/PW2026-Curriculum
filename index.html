@@ -14,7 +14,7 @@
             animation-timeline: --lista;
             animation-name: deslizar;
 
-            animation-range: entry 20% cover 60%;
+            animation-range: entry 20% cover 40%;
             animation-fill-mode: both;
         }
 
@@ -30,18 +30,41 @@
             }
         }
     </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+    </script>
 </head>
 
 <body class="bg-gray-100 min-h-screen">
     <header>
         <nav class="bg-white shadow-lg py-2 px-4 fixed top-0 left-0 right-0 z-50">
-            <ul class="flex space-x-4 justify-end">
-                <li><a href="#sobre-mi" class="hover:text-blue-500 pl-5">Sobre mi</a></li>
-                <li><a href="#aptitudes" class="hover:text-blue-500 border-l-2 border-beige-200 pl-5">Habilidades</a>
-                </li>
-                <li><a href="#proyectos" class="hover:text-blue-500 border-l-2 border-beige-200 pl-5">Proyectos</a></li>
-                <li><a href="#contacto" class="hover:text-blue-500 border-l-2 border-beige-200 pl-5">Contacto</a></li>
-            </ul>
+            <div class="flex items-center justify-between">
+                <button onclick="toggleMenu()" class=class="text-white md:hidden focus:outline-none">
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                    <span class="block w-6 h-0.5 bg-gray-700"></span>
+                </button>
+
+                <ul id="menu" class="hidden md:flex md:flex-row flex flex-col gap-4">
+                    <li><a href="#sobre-mi"
+                            class="hover:text-blue-500 border-l-2 border-beige-200 pl-5 mb-2 md:mb-0 md:border-none">Sobre
+                            mi</a>
+                    </li>
+                    <li><a href="#aptitudes"
+                            class="hover:text-blue-500 border-l-2 border-beige-200 pl-5 mb-2 md:mb-0">Habilidades</a>
+                    </li>
+                    <li><a href="#proyectos"
+                            class="hover:text-blue-500 border-l-2 border-beige-200 pl-5 mb-2 md:mb-0">Proyectos</a>
+                    </li>
+                    <li><a href="#contacto"
+                            class="hover:text-blue-500 border-l-2 border-beige-200 pl-5 mb-2 md:mb-0">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class=" lg:ml-32 lg:mr-32">
