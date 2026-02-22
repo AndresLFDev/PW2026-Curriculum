@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #lista-aptitudes-2 {
+            view-timeline-name: --lista;
+            view-timeline-axis: block;
+
+            animation-timeline: --lista;
+            animation-name: deslizar;
+
+            animation-range: entry 20% cover 60%;
+            animation-fill-mode: both;
+        }
+
+        @keyframes deslizar {
+            from {
+                opacity: 0;
+                transform: translateX(150px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 min-h-screen">
@@ -21,9 +45,9 @@
         </nav>
     </header>
     <main class=" lg:ml-32 lg:mr-32">
-        <section id="sobre-mi" class="mt-32">
+        <section id="sobre-mi" class="mt-32 h-[70vh] flex items-center justify-center">
             <div class=" m-10 flex flex-col items-center justify-center md:flex md:flex-row">
-                <img src="recursos/img/perfil.png" alt="Imagen de perfil">
+                <img src="recursos/img/perfil.png" alt="Imagen de perfil" class="w-72 h-72">
                 <div class="max-w-sm items-right justify-end md:ml-10">
                     <h1 class="text-3xl font-bold text-gray-800">Andres David Lara Fonseca</h1>
                     <p class="text-x text-gray-600">Soy un estudiante de ingenieria de sistemas, hambriento
@@ -49,16 +73,17 @@
                 </div>
             </div>
         </section>
-        <section id="aptitudes" class="flex items-center justify-center border-t-2 border-red-200 m-10 pt-20 mt-32">
+        <section id="aptitudes" class="flex items-center justify-center border-t-[3px] border-red-300 m-10 pt-20 mt-32">
             <div class="w-full max-w-2xl">
                 <h1 class="text-3xl font-bold text-gray-800">Habilidades</h1>
-                <div id="aptitudes-List" class="flex flex-col pt-5 md:flex md:flex-row md:gap-10">
-                    <ul class="list-disc list-inside text-gray-600 text-md ml-2">
+                <div id="lista-aptitudes-2" class="flex flex-col pt-5 md:flex md:flex-row md:gap-10">
+                    <ul class="list-disc list-inside text-gray-600 text-md ml-2 marker:text-red-500">
                         <li>Ingles B1</li>
                         <li>Buena comunicacion oral y escrita</li>
                         <li>Trabajo en equipo</li>
                     </ul>
-                    <ul class="list-disc list-inside text-gray-600 text-md ml-2">
+                    <ul id="lista-aptitudes-2"
+                        class="list-disc list-inside text-gray-600 text-md ml-2 marker:text-blue-500">
                         <li>Resiliencia</li>
                         <li>Adaptabilidad</li>
                         <li>Pensamiento logico y matematico</li>
@@ -66,7 +91,8 @@
                 </div>
             </div>
         </section>
-        <section id="Tecnologias" class="flex items-center justify-center border-t-2 border-red-200 m-10  mt-32 pt-20">
+        <section id="Tecnologias"
+            class="flex items-center justify-center border-t-[3px] border-blue-300 m-10  mt-32 pt-20">
             <div class="w-full max-w-2xl">
                 <h1 class="text-3xl font-bold text-gray-800 mb-6">Tecnologías</h1>
                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5">
@@ -110,7 +136,8 @@
                 </div>
             </div>
         </section>
-        <section id="proyectos" class="flex items-center justify-center border-t-2 border-red-200 m-10 mt-32 pt-20">
+        <section id="proyectos"
+            class="flex items-center justify-center border-t-[3px] border-blue-300 m-10 mt-32 pt-20">
             <div class="w-full max-w-2xl">
                 <h1 class="text-3xl font-bold text-gray-800 mb-6">Proyectos</h1>
                 <div class="flex flex-col gap-6">
@@ -141,7 +168,7 @@
         </section>
 
         <section id="contacto"
-            class="flex items-center justify-center border-t-[3px] border-[#eea302] m-10 mt-32 py-[5%]">
+            class="flex items-center justify-center border-t-[3px] border-yellow-300 m-10 mt-32 py-[5%]">
             <form onsubmit="validarFormularioMensaje(event)" class="flex flex-col w-full md:w-[40%]">
                 <h1 class="text-3xl font-bold text-gray-800 mb-6">Contacto</h1>
 
@@ -185,6 +212,7 @@
         <p class="mx-10">Instagram: @ADLaraF_10</p>
         <p class="mx-10">GitHub: ADLaraF10</p>
     </footer>
+
 </body>
 
 </html>
