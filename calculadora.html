@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="css/estiloCalculadora.css" />
+  <script src="JS/calculadora.js"></script>
+</head>
+
+<body>
+  <div class="principal">
+    <nav>
+      <a href="index.html">Acerca de mi</a>
+    </nav>
+    <div id="calculadora">
+      <input type="text" name="expresion" id="expresion" />
+      <div id="panel_botones">
+        <button onclick="agregarCaracter('7')">7</button>
+        <button onclick="agregarCaracter('8')">8</button>
+        <button onclick="agregarCaracter('9')">9</button>
+        <button onclick="agregarCaracter('/')" class="btn_operador">÷</button>
+
+        <button onclick="agregarCaracter('4')">4</button>
+        <button onclick="agregarCaracter('5')">5</button>
+        <button onclick="agregarCaracter('6')">6</button>
+        <button onclick="agregarCaracter('*')" class="btn_operador">×</button>
+
+        <button onclick="agregarCaracter('1')">1</button>
+        <button onclick="agregarCaracter('2')">2</button>
+        <button onclick="agregarCaracter('3')">3</button>
+        <button onclick="agregarCaracter('-')" class="btn_operador">-</button>
+
+        <button onclick="limpiar()" class="btn_especial">C</button>
+        <button onclick="agregarCaracter('0')">0</button>
+        <button onclick="hacerOperacion()" class="btn_especial">=</button>
+        <button onclick="agregarCaracter('+')" class="btn_operador">+</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Telefono: 3215994680</p>
+    <p>Instagram: @ADLaraF_10</p>
+    <p>GitHub: ADLaraF10</p>
+  </footer>
+</body>
+
+</html>
